@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoBattler Arena</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚔️ AutoBattler Arena</h1>
+            <p>Create your character and watch them battle!</p>
+        </header>
+
+        <div id="character-creation" class="section">
+            <h2>Create Your Character</h2>
+            <form id="character-form">
+                <div class="form-group">
+                    <label for="character-name">Character Name:</label>
+                    <input type="text" id="character-name" required maxlength="20">
+                </div>
+                
+                <div class="form-group">
+                    <label for="character-description">Character Description:</label>
+                    <textarea id="character-description" placeholder="Describe your character's appearance and personality..." maxlength="200"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="battle-strategy">Battle Strategy:</label>
+                    <select id="battle-strategy" required>
+                        <option value="">Choose a strategy...</option>
+                        <option value="aggressive">Aggressive - All-out attack</option>
+                        <option value="defensive">Defensive - Focus on defense and counter-attacks</option>
+                        <option value="balanced">Balanced - Mix of offense and defense</option>
+                        <option value="berserker">Berserker - High risk, high reward</option>
+                        <option value="tactical">Tactical - Careful and calculated</option>
+                    </select>
+                </div>
+                
+                <button type="submit">Create Character</button>
+            </form>
+        </div>
+
+        <div id="character-display" class="section hidden">
+            <h2>Your Character</h2>
+            <div id="character-info"></div>
+            <div class="action-buttons">
+                <button id="find-battle">Find Battle</button>
+                <button id="edit-character">Edit Character</button>
+            </div>
+        </div>
+
+        <div id="battle-section" class="section hidden">
+            <h2>Battle Arena</h2>
+            <div id="battle-display">
+                <div class="fighters">
+                    <div id="player-fighter" class="fighter">
+                        <div class="fighter-info">
+                            <h3 id="player-name"></h3>
+                            <div class="health-bar">
+                                <div id="player-health" class="health-fill"></div>
+                            </div>
+                            <div class="stats" id="player-stats"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="vs">VS</div>
+                    
+                    <div id="enemy-fighter" class="fighter">
+                        <div class="fighter-info">
+                            <h3 id="enemy-name"></h3>
+                            <div class="health-bar">
+                                <div id="enemy-health" class="health-fill"></div>
+                            </div>
+                            <div class="stats" id="enemy-stats"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="battle-log"></div>
+                <div class="battle-controls">
+                    <button id="start-battle">Start Battle</button>
+                    <button id="new-battle" class="hidden">Find New Battle</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="leaderboard" class="section">
+            <h2>Leaderboard</h2>
+            <div id="leaderboard-list"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

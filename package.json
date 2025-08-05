@@ -1,0 +1,13 @@
+{
+  "name": "autobattler-arena",
+  "version": "1.0.0",
+  "description": "A simple autobattler game where players create characters that battle automatically",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "deploy": "echo 'Deploy to Vercel: vercel --prod' && echo 'Deploy to Netlify: netlify deploy --prod --dir .'"
+  },
+  "keywords": ["game", "autobattler", "web", "javascript"],
+  "author": "AutoBattler Team",
+  "license": "MIT"
+}
